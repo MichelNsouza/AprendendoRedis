@@ -7,7 +7,7 @@ use Predis\Client as Predis;
 
 $guzz = new Guzz([
     'base_uri' => 'http://servicodados.ibge.gov.br/api/v1/localidades/',
-    'timeout' => 172800.0,         
+    'timeout' => 60.0,         
 ]);
 
 
@@ -72,9 +72,13 @@ if(empty($teste)){
     <title>PHP Test</title>
   </head>
   <body>
+  
   <h1>Aprendendo Redis</h1>
-    <p>Essa solicitação leva em media 10 segundos</p>
-
-  Total de municipios no brasil, api ibge: <?php echo $teste; ?> 
+  
+  <p>Total de municipios no brasil, api ibge: <?php echo $teste; ?></p>
+    
+  <p>Essa solicitação leva em media 10 segundos</p>
+  
+  <p>Por 60 segundos o Redis esta otimizando esse tempo.</p>
 
 </html>
