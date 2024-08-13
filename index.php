@@ -77,8 +77,8 @@ if(empty($teste)){
   
   <p>Total de municipios no brasil, api ibge: <?php echo $teste; ?></p>
     
-  <p>Essa solicitação leva em media 10 segundos</p>
+  <p>Essa solicitação sem o Redis leva em media 15 segundos</p>
   
   <p>Por 60 segundos o Redis esta otimizando esse tempo.</p>
-
+  <p>Agora a solicitação com o Redis leva em media 1 segundo</p>
 </html>
