@@ -7,7 +7,7 @@
 
     $guzz = new Guzz([
         'base_uri' => 'http://servicodados.ibge.gov.br/api/v1/localidades/',
-        'timeout' => 60.0,         
+        'timeout' => 300.0,         
     ]);
 
 
