@@ -1,21 +1,10 @@
 {
-  "builds": [
-    {
-      "src": "index.php",
-      "use": "@vercel/php",
-      "config": {
-        "includeFiles": [
-          "vendor/**"
-        ]
-      }
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.7.0"
     }
-  ],
-  "scripts": {
-    "build": "composer install"
   },
-  "cache": {
-    "paths": [
-      "vendor/"
-    ]
-  }
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ]
 }
